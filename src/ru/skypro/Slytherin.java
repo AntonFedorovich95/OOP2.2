@@ -1,6 +1,6 @@
 package ru.skypro;
 
-public class Slytherin extends hogwarts {
+public class Slytherin extends Hogwarts {
     private int cunning;
     private int determination;
     private int ambition;
@@ -20,51 +20,41 @@ public class Slytherin extends hogwarts {
         return cunning;
     }
 
-    public void setCunning(int cunning) {
-        this.cunning = cunning;
-    }
-
     public int getDetermination() {
         return determination;
-    }
-
-    public void setDetermination(int determination) {
-        this.determination = determination;
     }
 
     public int getAmbition() {
         return ambition;
     }
 
-    public void setAmbition(int ambition) {
-        this.ambition = ambition;
-    }
-
     public int getResourcefulness() {
         return resourcefulness;
-    }
-
-    public void setResourcefulness(int resourcefulness) {
-        this.resourcefulness = resourcefulness;
     }
 
     public int getThirstForPower() {
         return thirstForPower;
     }
 
-    public void setThirstForPower(int thirstForPower) {
-        this.thirstForPower = thirstForPower;
-    }
-
     @Override
     public String toString() {
-        return super.toString() + "Slytherin{" +
-                "cunning=" + cunning +
-                ", determination=" + determination +
-                ", ambition=" + ambition +
-                ", resourcefulness=" + resourcefulness +
-                ", thirstForPower=" + thirstForPower +
+        return super.toString() + "Слизерин {" +
+                ", Хитрость = " + cunning +
+                ", Решительность = " + determination +
+                ", Амбициозность = " + ambition +
+                ", Находчивость = " + resourcefulness +
+                ", Жажда власти = " + thirstForPower +
                 "} ";
+    }
+
+    public void comparisonOfPropertiesSlytserin(Slytherin student) {
+        if (this.getCunning() > student.getCunning()) {
+            System.out.println(this.getName() + " хитрее чем " + student.getName());
+        } else if (this.getCunning() == student.getCunning()) {
+            System.out.println("Студенты хитры одинаково!");
+        } else {
+            System.out.println(student.getName() + " хитрее чем " + this.getName());
+        }
     }
 }
 
